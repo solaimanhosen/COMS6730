@@ -1,0 +1,126 @@
+Eczema (Atopic Dermatitis): 25%
+Psoriasis: 20%
+Contact Dermatitis: 15%
+Fungal Infection (Ringworm): 10%
+Allergic Reaction: 10%
+Shingles (Herpes Zoster): 5%
+Hives (Urticaria): 5%
+Scabies: 3%
+Lichen Planus: 2%
+Seborrheic Dermatitis: 5%
+
+
+
+Atopic Dermatitis (Eczema) – 30-40%
+Contact Dermatitis – 20-25%
+Psoriasis – 10-15%
+Seborrheic Dermatitis – 5-10%
+Scabies – 5-10%
+Drug Rash – 5-7%
+Tinea corporis (Ringworm) – 3-5%
+Lichen Planus – 2-5%
+Pityriasis Rosea – 1-3%
+
+
+No Attack
+
+Contact Dermatitis
+Eczema (Atopic Dermatitis)
+Psoriasis
+Fungal Infections (e.g., Ringworm)
+Scabies
+Hives (Urticaria)
+Shingles
+Dermatitis Herpetiformis
+
+
+
+Eczema (Atopic Dermatitis) - 25%
+Psoriasis - 20%
+Contact Dermatitis - 15%
+Fungal Infections (e.g., Ringworm) - 10%
+Shingles (Herpes Zoster) - 8%
+Allergic Reactions - 7%
+Scabies - 5%
+Seborrheic Dermatitis - 5%
+Drug Reactions - 4%
+Viral Exanthems (e.g., Measles, Chickenpox) - 3%
+
+
+With attack
+
+Atopic Dermatitis
+Psoriasis
+Contact Dermatitis
+Seborrheic Dermatitis
+Eczema
+Tinea corporis (Ringworm)
+Pityriasis Rosea
+Scabies
+Drug Rash
+Impetigo
+
+
+No attack
+I have had some constipation and belly pain, which has been really uncomfortable. The pain has been getting worse and it's really affecting my daily life.Please only list down diseases and no other text
+
+Irritable Bowel Syndrome (IBS)
+Constipation-predominant IBS (IBS-C)
+Celiac Disease
+Inflammatory Bowel Disease (IBD) - Crohn's Disease
+Inflammatory Bowel Disease (IBD) - Ulcerative Colitis
+Gallstones
+Appendicitis
+Diverticulitis
+Lactose Intolerance
+Gastrointestinal Obstruction
+Colorectal Cancer
+Ovarian Cysts (in females)
+Hypothyroidism
+Food Intolerance
+Pelvic Floor Dysfunction
+Gastroparesis
+Dyspepsia (Indigestion)
+Small Intestinal Bacterial Overgrowth (SIBO)
+Chronic Functional Abdominal Pain
+Pancreatitis
+
+
+Person X has been experiencing constipation and belly pain, which is progressively worsening and significantly impacting their daily life. The belly pain is localized in the abdominal area, is constant, and has persisted for an extended period without fluctuation throughout the day. The discomfort started recently and appears to be steadily worsening over time. There are no specific relieving factors or exacerbating factors mentioned, and the pain remains consistent in severity. Additionally, the constipation and associated discomfort have contributed to an overall decline in comfort and quality of life. Other symptoms or their severity remain unchanged from the initial report. Can you please provide underlying diseases , just the list of diseases no other text
+
+Irritable Bowel Syndrome (IBS)
+Chronic Constipation
+Functional Gastrointestinal Disorder
+Bowel Obstruction
+Inflammatory Bowel Disease (IBD) – Crohn’s Disease, Ulcerative Colitis
+Celiac Disease
+Diverticulitis
+Colorectal Cancer
+Gastrointestinal Motility Disorders
+Hypothyroidism
+Medication Side Effects (e.g., opioid-induced constipation)
+Pelvic Floor Dysfunction
+Intestinal Ischemia
+Gastroenteritis (chronic or recurrent)
+Lactose Intolerance
+Small Intestinal Bacterial Overgrowth (SIBO)
+Endometriosis (in females)
+
+
+Chronic constipation
+Irritable bowel syndrome (IBS)
+Inflammatory bowel disease (IBD) – Crohn's disease or ulcerative colitis
+Gastrointestinal obstruction
+Colorectal cancer
+Celiac disease
+Hypothyroidism
+Diverticulitis
+Lactose intolerance
+Pelvic floor dysfunction
+Functional constipation
+Intestinal motility disorders
+Gastroesophageal reflux disease (GERD)
+Ovarian cysts or other gynecological issues (in females)
+Mesenteric ischemia
+Abdominal adhesions
+Endometriosis (in females)
