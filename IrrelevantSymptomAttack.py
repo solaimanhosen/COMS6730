@@ -2,12 +2,11 @@ from openai import OpenAI
 import os
 import re
 import sys
+from dotenv import load_dotenv
 
+load_dotenv()
+client = OpenAI(api_key=os.getenv('OPEN_AI_KEY'))
 
-client = OpenAI(
-    # defaults to os.environ.get("OPENAI_API_KEY")
-    api_key="",
-)
 system_prompt = "You are a helpful disease diagnosing agent as you will listing the possible diseases from symptoms. Do not Explain or provide any other text"
 
 orig_note = "This morning when I woke up, I discovered an extremely bad rash on my skin. There are several pus-filled pimples and blackheads all around. My skin has also been moving around a lot."

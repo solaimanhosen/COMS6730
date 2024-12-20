@@ -5,6 +5,9 @@ import sys
 import csv
 import pandas as pd
 import time
+from dotenv import load_dotenv
+
+load_dotenv()
 
 file_path = 'C:/Users/jabir/OneDrive/Documents/COMS673/Project/Datasets/Symptom2Disease.csv'
 file_path_write = 'C:/Users/jabir/OneDrive/Documents/COMS673/Project/Datasets/SymptomAttacks_by_number_100.csv'
@@ -22,10 +25,7 @@ symptomsAttackData = []
 symptomsAttackData.append(['Original_text','Attack_text'])
 origSymptomsData =[]
 for index, row in df.iterrows():
-    client = OpenAI(
-        # defaults to os.environ.get("OPENAI_API_KEY")
-        api_key="",
-    )
+    client = OpenAI(api_key=os.getenv('OPEN_AI_KEY'))
     system_prompt = "You are a helpful medical symptom extractor. Respond by listing the symptoms only in number format. Do not Explain or provide any other text"
 
     #user_input = "'I was in the middle of a workout when I suddenly developed a headache, chest pain, and dizziness. It's been hard for me to maintain my balance since then'. Please extract only the symptoms listed in numbered format just one symptom per line and nothing else"

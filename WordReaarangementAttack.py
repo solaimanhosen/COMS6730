@@ -6,13 +6,11 @@ import pandas as pd
 import random
 import time
 import csv
+from dotenv import load_dotenv
 
+load_dotenv()
+client = OpenAI(api_key=os.getenv('OPEN_AI_KEY'))
 
-
-client = OpenAI(
-    # defaults to os.environ.get("OPENAI_API_KEY")
-    api_key="",
-)
 system_prompt = "You are a helpful medical symptom extractor. Respond by listing the symptoms only in number format. Do not Explain or provide any other text"
 
 file_path = 'C:/Users/jabir/OneDrive/Documents/COMS673/Project/Datasets/Symptom2Disease.csv'

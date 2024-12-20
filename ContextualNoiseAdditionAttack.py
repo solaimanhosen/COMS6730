@@ -5,11 +5,11 @@ import sys
 import pandas as pd
 import time
 import csv
+from dotenv import load_dotenv
 
-client = OpenAI(
-    # defaults to os.environ.get("OPENAI_API_KEY")
-    api_key="",
-)
+load_dotenv()
+client = OpenAI(api_key=os.getenv('OPEN_AI_KEY'))
+
 system_prompt = "You are a helpful medical symptom extractor. Respond by listing the symptoms only in number format. Do not Explain or provide any other text"
 
 #user_input = "'I was in the middle of a workout when I suddenly developed a headache, chest pain, and dizziness. It's been hard for me to maintain my balance since then'. Please extract only the symptoms listed in numbered format just one symptom per line and nothing else"
