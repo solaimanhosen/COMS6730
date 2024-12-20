@@ -6,11 +6,30 @@ import csv
 import pandas as pd
 import time
 from dotenv import load_dotenv
+import argparse
 
 load_dotenv()
 
-file_path = 'C:/Users/jabir/OneDrive/Documents/COMS673/Project/Datasets/IrrelevantSymptoms_100.csv'
-file_path_write = 'C:/Users/jabir/OneDrive/Documents/COMS673/Project/Datasets/IrrelevantSymptoms_DiseasesOutcomes.csv'
+parser = argparse.ArgumentParser(description="")
+parser.add_argument("-i", type=str, required=True, help="Path to input dataset")
+parser.add_argument("-o", type=str, required=True, help="Path to output dataset")
+
+
+args = parser.parse_args()
+
+
+# print(args.i)
+# print(args.o)
+
+
+file_path = os.getcwd() + '/Datasets/' + args.i
+file_path_write = os.getcwd() + '/Datasets/' + args.o
+
+
+# print(file_path)
+# print(file_path_write)
+# sys.exit()
+
 df = pd.read_csv(file_path)
 print(df.head())
 shuffled_df = df.sample(frac=1, random_state=80).reset_index(drop=True)
