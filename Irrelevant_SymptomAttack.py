@@ -13,7 +13,7 @@ client = OpenAI(api_key=os.getenv('OPEN_AI_KEY'))
 #file_path = 'C:/Users/jabir/OneDrive/Documents/COMS673/Project/Datasets/Symptom2Disease.csv'
 file_path = 'Datasets/Symptom2Disease.csv'
 #file_path_write = 'C:/Users/jabir/OneDrive/Documents/COMS673/Project/Datasets/IrrelevantSymptoms_100.csv'
-file_path_write = 'Datasets/IrrelevantSymptoms_100.csv'
+file_path_write = 'Datasets/IrrelevantSymptoms.csv'
 df = pd.read_csv(file_path)
 print(df.head())
 shuffled_df = df.sample(frac=1, random_state=42).reset_index(drop=True)
@@ -68,7 +68,7 @@ for index, row in df.iterrows():
     if row_index ==50:
         break; 
     print(modified_clinical_note) 
-    
+
 file = open(file_path_write, mode='a',encoding='utf-8', newline='')
 writer = csv.writer(file)
 writer.writerows(symptomsAttackData)

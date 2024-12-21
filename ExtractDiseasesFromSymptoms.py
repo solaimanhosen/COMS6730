@@ -42,7 +42,7 @@ symptomsAttackData = []
 origSymptomsData =[]
 DiseasesData_with_attack = []
 
-#DiseasesData_with_attack.append(["Original_note","Attacked_note","Diseases_with_attack","Diseases_without_attack"])
+DiseasesData_with_attack.append(["Original_note","Attacked_note","Diseases_with_attack","Diseases_without_attack"])
 
 for index, row in df.iterrows():
     client = OpenAI(api_key=os.getenv('OPEN_AI_KEY'))
@@ -51,8 +51,8 @@ for index, row in df.iterrows():
     #user_input = "'I was in the middle of a workout when I suddenly developed a headache, chest pain, and dizziness. It's been hard for me to maintain my balance since then'. Please extract only the symptoms listed in numbered format just one symptom per line and nothing else"
     #with open('your_file.csv', mode='r') as file:
 
-    orig_symptoms = row['Original']
-    attack_symptoms = row['Attack']
+    orig_symptoms = row['Original_text']
+    attack_symptoms = row['Attack_text']
 
     #orig_note = "I've had a high temperature, vomiting, chills, and intense itching. I also have a headache and am perspiring a lot. My discomfort has also been brought
     #  on by nausea and muscle ache."

@@ -14,7 +14,7 @@ client = OpenAI(api_key=os.getenv('OPEN_AI_KEY'))
 system_prompt = "You are a helpful medical symptom extractor. Respond by listing the symptoms only in number format. Do not Explain or provide any other text"
 
 file_path = 'Datasets/Symptom2Disease.csv'
-file_path_write = 'Datasets/WordRearrangementAttacks_100.csv'
+file_path_write = 'Datasets/WordRearrangementAttacks.csv'
 df = pd.read_csv(file_path)
 print(df.head())
 shuffled_df = df.sample(frac=1, random_state=500).reset_index(drop=True)
