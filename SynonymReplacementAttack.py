@@ -9,8 +9,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-file_path = 'C:/Users/jabir/OneDrive/Documents/COMS673/Project/Datasets/Symptom2Disease.csv'
-file_path_write = 'C:/Users/jabir/OneDrive/Documents/COMS673/Project/Datasets/SymptomAttacks_100.csv'
+#file_path = 'C:/Users/jabir/OneDrive/Documents/COMS673/Project/Datasets/Symptom2Disease.csv'
+file_path = 'Datasets/Symptom2Disease.csv'
+
+#file_path_write = 'C:/Users/jabir/OneDrive/Documents/COMS673/Project/Datasets/SymptomAttacks_100.csv'
+file_path_write = 'Datasets/SymptomAttacks_100.csv'
+
 df = pd.read_csv(file_path)
 print(df.head())
 shuffled_df = df.sample(frac=1, random_state=42).reset_index(drop=True)
@@ -26,27 +30,23 @@ for index, row in df.iterrows():
     client = OpenAI(api_key=os.getenv('OPEN_AI_KEY'))
     system_prompt = "You are a helpful medical symptom extractor. Respond by listing the symptoms only in number format. Do not Explain or provide any other text"
 
-    #user_input = "'I was in the middle of a workout when I suddenly developed a headache, chest pain, and dizziness. It's been hard for me to maintain my balance since then'. Please extract only the symptoms listed in numbered format just one symptom per line and nothing else"
-    #with open('your_file.csv', mode='r') as file:
+    
 
     orig_note = row['text']
-    #orig_note = "I've had a high temperature, vomiting, chills, and intense itching. I also have a headache and am perspiring a lot. My discomfort has also been brought on by nausea and muscle ache."
+    
+    #prompt to extract symptoms
     user_input_orig_note_prompt = "'"+orig_note+"'.  Please extract only the symptoms listed in numbered format just one symptom per line and nothing else"
 
     response = client.chat.completions.create(model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": user_input_orig_note_prompt}])
 
     reply = response.choices[0].message.content.strip()
-    #print(reply)
-    #sys.exit()
-    #pattern = r"\d+\.\s[^\d]*(?:\n(?!\d+\.).*)*"
-
-    #user_input = "'I was in the middle of a workout when I suddenly developed a headache, chest pain, and dizziness. It's been hard for me to maintain my balance since then'. Please extract only the symptoms listed in numbered format just one symptom per line and nothing else"
-    #user_input = "'I've had a high temperature, vomiting, chills, and intense itching. I also have a headache and am perspiring a lot. My discomfort has also been brought on by nausea and muscle ache.'. Please extract only the symptoms listed in numbered format just one symptom per line and nothing else"
-
+    
+    
     pattern = r"\d+\.\s([^\n]+)"
     matches = re.findall(pattern, reply, re.MULTILINE)
 
+    #prompt to extract the synonyms
     user_input_mod = "The original clinical note was " +"\'"+orig_note+"\'"+" Modify the note such that the symptoms"
     for i in range(0,len(matches)):
         system_prompt = "You are a helpful medical symptom synonym extractor. Respond by listing one not very likely synonym of the symptom. Do not Explain or provide any other text"
@@ -62,6 +62,7 @@ for index, row in df.iterrows():
 
             user_input_mod = user_input_mod+  " \'"+matches[i]+"\' is replaced by its synomyn '"+synomym+"'." 
         
+    #prompt to create modified clinical note with attack replacing symptoms with their synonyms
     user_input_mod = user_input_mod + " The rest of symptoms and context remaining unchanged.Please provide the updated clinical note only and no other text"
     print(user_input_mod)
     response = client.chat.completions.create(model="gpt-3.5-turbo",
@@ -77,6 +78,8 @@ for index, row in df.iterrows():
     if row_index%5==0:
         time.sleep(1)
         #break;
+
+    #generate 50 attacks
     if row_index ==50:
         break;  
 
